@@ -223,7 +223,8 @@ button:focus-visible, a:focus-visible {
   visibility: hidden;
   pointer-events: none;
   transform: translateY(-8px);
-  transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  /* закрытие: задержка 1.2с, потом плавное исчезновение за 0.3с */
+  transition: opacity .3s ease 1.2s, transform .3s ease 1.2s, visibility 0s linear 1.5s;
 }
 
 .nav-item:hover .nav-dropdown {
@@ -231,6 +232,8 @@ button:focus-visible, a:focus-visible {
   visibility: visible;
   pointer-events: all;
   transform: translateY(0);
+  /* открытие: без задержки */
+  transition: opacity .2s ease, transform .2s ease, visibility 0s linear 0s;
 }
 
 .nav-dropdown a {
@@ -1684,8 +1687,7 @@ button:focus-visible, a:focus-visible {
 
 /* ===================== ГЕРОЙ / ГЛАВНЫЙ ЭКРАН ===================== */
 .hero {
-  background: linear-gradient(135deg, rgba(6,12,29,.82) 0%, rgba(15,23,42,.75) 100%),
-              url(https://itrun.kg/static/imgs/background.jpeg) center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(6, 12, 29, .32) 0%, rgba(15, 23, 42, 0.45) 100%), url(https://itrun.kg/static/imgs/background.jpeg) center / cover no-repeat;
   color: #fff;
   padding: 100px 24px 120px;
   position: relative;
@@ -1928,7 +1930,7 @@ button:focus-visible, a:focus-visible {
 
 /* ===================== БЫСТРЫЕ ССЫЛКИ (QUICK BAR) ===================== */
 .quick-bar {
-  background: var(--primary);
+  background: #34477c;
   color: #fff;
   overflow: hidden;
   border-bottom: 2px solid rgba(245, 158, 11, .5);
