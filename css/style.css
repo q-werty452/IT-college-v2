@@ -1930,7 +1930,7 @@ button:focus-visible, a:focus-visible {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,.45);
+  background: rgba(0,0,0,.1);
   border: none;
   color: #fff;
   font-size: 32px;
@@ -1945,7 +1945,7 @@ button:focus-visible, a:focus-visible {
   transition: background .2s;
   line-height: 1;
 }
-.banner-btn:hover { background: rgba(0,0,0,.75); }
+.banner-btn:hover { background: rgba(0,0,0,.3); }
 .banner-btn--prev { left: 14px; }
 .banner-btn--next { right: 14px; }
 .banner-dots {
@@ -2540,29 +2540,43 @@ button:focus-visible, a:focus-visible {
 
 /* Page hero */
 .page-hero {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
-  padding: 64px 0 56px;
+  background: linear-gradient(135deg, var(--dark) 0%, #1a3a8a 55%, #0ea5e9 100%);
+  color: #fff;
+  padding: 72px 24px 80px;
   position: relative;
   overflow: hidden;
+  animation: heroFadeIn .8s ease both;
 }
 .page-hero::before {
   content: '';
-  position: absolute;
-  top: -80px; right: -80px;
-  width: 280px; height: 280px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.06);
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 55% 60% at 85% 40%, rgba(14,165,233,.3) 0%, transparent 70%),
+    radial-gradient(ellipse 35% 40% at 10% 80%, rgba(245,158,11,.1) 0%, transparent 60%);
   pointer-events: none;
+}
+.page-hero-dots {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,.09) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.page-hero-inner {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 .page-hero h1 {
   color: #fff;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  margin-bottom: 10px;
+  font-size: clamp(28px, 4.5vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 14px;
 }
+.page-hero h1 span { color: #fbbf24; }
 .page-hero p {
-  color: rgba(255,255,255,.75);
-  font-size: 1rem;
-  max-width: 540px;
+  color: rgba(255,255,255,.82);
+  font-size: clamp(14px, 1.8vw, 17px);
+  max-width: 520px;
 }
 
 /* Breadcrumb */
