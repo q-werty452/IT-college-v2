@@ -224,7 +224,7 @@ button:focus-visible, a:focus-visible {
   pointer-events: none;
   transform: translateY(-8px);
   /* закрытие: задержка 1.2с, потом плавное исчезновение за 0.3с */
-  transition: opacity .3s ease 1.2s, transform .3s ease 1.2s, visibility 0s linear 1.5s;
+  transition: opacity .3s ease 1s, transform .3s ease 1s, visibility 0s linear 1.3s;
 }
 
 .nav-item:hover .nav-dropdown {
