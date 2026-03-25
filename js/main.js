@@ -121,10 +121,8 @@ document.querySelectorAll('.npa-doc').forEach(function(doc) {
   doc.onclick = function() {
     var pdfSrc = doc.getAttribute('data-pdf');
     if (!pdfSrc) return;
-    if (!pdfSrc.startsWith('http')) {
-      var base = 'https://q-werty452.github.io/IT-college-v2/';
-      pdfSrc = 'https://docs.google.com/viewer?url=' + base + pdfSrc + '&embedded=true';
-    }
+    // Используем прямой путь — браузер рендерит PDF нативно
+
     var viewer = doc.nextElementSibling;
     if (!viewer || !viewer.classList.contains('npa-pdf-viewer')) return;
     var isOpen = viewer.classList.contains('open');
