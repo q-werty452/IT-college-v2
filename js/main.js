@@ -490,7 +490,7 @@ function setLang(lang) {
     });
   }
 
-  function startAuto() { timer = setInterval(function() { go(cur + 1); }, 3500); }
+  function startAuto() { timer = setInterval(function() { go(cur + 1); }, 5500); }
   function stopAuto()  { clearInterval(timer); }
 
   prev.onclick = function() { stopAuto(); go(cur - 1); startAuto(); };
