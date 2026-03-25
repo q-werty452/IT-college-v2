@@ -1,162 +1,8 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Новость — IT COLLEGE</title>
-  <link rel="icon" href="img/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* ================================================
+   main.js — Main page scripts
+   IT COLLEGE v2
+   ================================================ */
 
-<div id="progress-bar"></div>
-
-
-
-
-
-
-<!-- ===== НАВИГАЦИЯ ===== -->
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <img src="img/favicon.png" alt="IT COLLEGE" width="110" height="38" style="height:38px;width:auto;display:block">
-    </a>
-    <div class="nav-links">
-            <div class="nav-item">
-              <a href="abiturientam.html" class="nav-link" data-i18n="nav_abit">Абитуриентам <span class="arrow">▾</span></a>
-              <div class="nav-dropdown"><a href="abiturientam.html">Главная абитуриента</a><a href="open-day.html">День открытых дверей</a><a href="priyemnaya-komissiya.html">Приёмная комиссия</a><a href="budjet-mesta.html">Бюджетные места</a><a href="college2025-2026.html">Приём 2025/26</a><a href="perevod.html">Перевод из другого учебного заведения</a><a href="stoimost.html">Стоимость обучения</a><a href="submit-documents.html">Подать документы онлайн</a></div>
-            </div><div class="nav-item"><a href="spec.html" class="nav-link" data-i18n="nav_programs">Программы</a></div>
-            <div class="nav-item">
-              <a href="#" class="nav-link" data-i18n="nav_students">Студентам <span class="arrow">▾</span></a>
-              <div class="nav-dropdown"><a href="graduates-full.html">Выпускники</a><a href="blog.html">Новости</a><a href="director.html">Директор</a><a href="kontakty.html">Контакты</a><a href="otvety-na-voprosy.html">Вопросы и ответы</a></div>
-            </div><div class="nav-item"><a href="blog.html" class="nav-link active" data-i18n="nav_news">Новости</a></div><div class="nav-item"><a href="kontakty.html" class="nav-link" data-i18n="nav_contacts">Контакты</a></div></div>
-        <div class="lang-switcher">
-      <button class="lang-btn active" data-lang="ru" onclick="setLang('ru')">RU</button>
-      <button class="lang-btn" data-lang="ky" onclick="setLang('ky')">KY</button>
-      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
-    </div>
-    <div class="nav-btns">
-      <a href="submit-documents.html" class="btn btn-primary btn-sm" data-i18n="btn_apply">Поступить</a>
-      <a href="https://e-bilim.kg/" target="_blank" class="btn btn-ebilim btn-sm">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-        E-bilim
-      </a>
-    </div>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Меню">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="nav-mobile" id="nav-mobile">
-  <div class="nav-mobile-inner">
-    <button class="nav-mobile-close" id="nav-mobile-close"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-    <div style="margin-top:40px">
-      <div class="nav-mobile-section"><div class="nav-mobile-label">Абитуриентам</div><a href="abiturientam.html">Абитуриентам</a><a href="abiturientam.html" class="sub">Главная абитуриента</a><a href="open-day.html" class="sub">День открытых дверей</a><a href="priyemnaya-komissiya.html" class="sub">Приёмная комиссия</a><a href="budjet-mesta.html" class="sub">Бюджетные места</a><a href="college2025-2026.html" class="sub">Приём 2025/26</a><a href="perevod.html" class="sub">Перевод из другого учебного заведения</a><a href="stoimost.html" class="sub">Стоимость обучения</a><a href="submit-documents.html" class="sub">Подать документы онлайн</a></div><div class="nav-mobile-section"><div class="nav-mobile-label">Программы</div><a href="spec.html">Программы</a></div><div class="nav-mobile-section"><div class="nav-mobile-label">Студентам</div><a href="#">Студентам</a><a href="graduates-full.html" class="sub">Выпускники</a><a href="blog.html" class="sub">Новости</a><a href="director.html" class="sub">Директор</a><a href="kontakty.html" class="sub">Контакты</a><a href="otvety-na-voprosy.html" class="sub">Вопросы и ответы</a></div><div class="nav-mobile-section"><div class="nav-mobile-label">Новости</div><a href="blog.html">Новости</a></div><div class="nav-mobile-section"><div class="nav-mobile-label">Контакты</div><a href="kontakty.html">Контакты</a></div>
-      <div style="display:flex;gap:8px;margin-top:20px;flex-wrap:wrap;">
-        <a href="submit-documents.html" class="btn btn-primary">Поступить</a>
-        <a href="https://e-bilim.kg/" target="_blank" class="btn btn-ebilim">E-bilim</a>
-      </div>
-    </div>
-  </div>
-</div>
-<button id="btt" aria-label="Вверх"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
-
-
-
-
-
-
-
-<!-- ===== ЗАГОЛОВОК СТРАНИЦЫ ===== -->
-<div class="page-header">
-  <h1>IT COLLEGE открывает новую лабораторию кибербезопасности</h1>
-  <div class="breadcrumb"><a href="index.html">Главная</a> / <a href="blog.html">Новости</a> / Статья</div>
-</div>
-<section class="section">
-  <div class="container" style="max-width:800px">
-    <div class="card" style="overflow:visible;border:none;box-shadow:none">
-      <img src="https://picsum.photos/seed/n1/600/340" alt="" style="width:100%;border-radius:16px;margin-bottom:24px" loading="lazy">
-      <div style="color:var(--gray);font-size:13px;margin-bottom:16px;display:flex;align-items:center;gap:5px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" ><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> 12.03.2025</div>
-      <p style="font-size:16px;line-height:1.8;color:#374151;margin-bottom:16px">В марте 2025 года в нашем колледже открылась современная лаборатория кибербезопасности, оснащённая последним оборудованием.</p>
-      <p style="font-size:16px;line-height:1.8;color:#374151;margin-bottom:16px">
-        Студенты нашего колледжа продолжают демонстрировать высокие результаты в профессиональных конкурсах. Преподавательский состав постоянно совершенствует учебные программы, внедряя новейшие технологии и методики обучения.
-      </p>
-      <p style="font-size:16px;line-height:1.8;color:#374151">
-        IT COLLEGE стремится дать каждому студенту не только теоретические знания, но и практические навыки, востребованные работодателями. Партнёрство с ведущими IT-компаниями страны обеспечивает студентам доступ к реальным проектам ещё в период обучения.
-      </p>
-      <div style="margin-top:32px">
-        <a href="blog.html" class="btn btn-outline">← Назад к новостям</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-<!-- ===== ФУТЕР ===== -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <img src="img/favicon.png" alt="IT COLLEGE" style="height:32px;width:auto;filter:brightness(10)">
-      </div>
-      <p>Профессиональное IT-образование в Кыргызстане. Диплом государственного образца. Бюджетные места.</p>
-      <p style="margin-top:8px;display:flex;align-items:center;gap:6px"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> г. Манас, ул. Центральная, 45</p>
-      <p style="display:flex;align-items:center;gap:6px"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +996 507 022 202</p>
-      <p style="display:flex;align-items:center;gap:6px"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg> info@itcollege.kg</p>
-      <div class="footer-socials">
-        <a href="https://t.me/itcollegemanas" target="_blank" class="social-btn" title="Telegram"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7z"/></svg></a>
-        <a href="https://vk.com/itcollegemanas"  target="_blank" class="social-btn" title="VK"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 7h3.5c.3 2.5 1.5 7 3 7 1 0 1.5-2 1.5-4.5V7H14c-.2 4.5 1 9 3 9M17 11.5c1.5 0 2.5-1 2.5-2.5 0-1.5-1-2.5-2.5-2.5"/></svg></a>
-        <a href="https://www.youtube.com/@itcollegemanas" target="_blank" class="social-btn" title="YouTube"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M10 9l6 3-6 3V9z"/></svg></a>
-        <a href="https://wa.me/996507022202" target="_blank" class="social-btn" title="WhatsApp"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
-      </div>
-    </div>
-    <div>
-      <h4>Абитуриентам</h4>
-      <ul>
-        <li><a href="abiturientam.html">Информация</a></li>
-        <li><a href="open-day.html">День открытых дверей</a></li>
-        <li><a href="priyemnaya-komissiya.html">Приёмная комиссия</a></li>
-        <li><a href="budjet-mesta.html">Бюджетные места</a></li>
-        <li><a href="stoimost.html">Стоимость обучения</a></li>
-        <li><a href="submit-documents.html">Подать документы</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Колледж</h4>
-      <ul>
-        <li><a href="spec.html">Программы обучения</a></li>
-        <li><a href="graduates-full.html">Выпускники</a></li>
-        <li><a href="blog.html">Новости</a></li>
-        <li><a href="director.html">Руководство</a></li>
-        <li><a href="otvety-na-voprosy.html">FAQ</a></li>
-        <li><a href="kontakty.html">Контакты</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Контакты</h4>
-      <ul>
-        <li><a href="tel:+996507022202">+996 507 022 202</a></li>
-        <li><a href="tel:+996755022202">+996 755 022 202</a></li>
-        <li><a href="mailto:info@itcollege.kg">info@itcollege.kg</a></li>
-        <li><a href="https://t.me/itcollegemanas" target="_blank">Telegram</a></li>
-        <li><a href="otvety-na-voprosy.html">Задать вопрос</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 IT COLLEGE — Все права защищены</span>
-    <span>Разработано IT-RUN Studio</span>
-  </div>
-</footer>
-
-<script>
 // ── Scroll + UI ──────────────────────────────────────────────────────────
 var pb  = document.getElementById('progress-bar');
 var btt = document.getElementById('btt');
@@ -179,21 +25,228 @@ if (mobile) mobile.addEventListener('click', function(e) {
   if (e.target === mobile) mobile.classList.remove('open');
 });
 
+// ── Programs filter ──────────────────────────────────────────────────────
+document.querySelectorAll('.filter-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var filter = btn.getAttribute('data-filter');
+    document.querySelectorAll('.programs-grid .program-card').forEach(function(card) {
+      if (filter === 'all' || card.getAttribute('data-category') === filter) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+
 // ── Scroll reveal ────────────────────────────────────────────────────────
+function animateCounter(el) {
+  var target = parseInt(el.getAttribute('data-counter'), 10);
+  var suffix = el.getAttribute('data-suffix') || '';
+  var duration = 1200;
+  var start = null;
+  function step(ts) {
+    if (!start) start = ts;
+    var p = Math.min((ts - start) / duration, 1);
+    var ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.floor(ease * target) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
 var io = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) {
-    if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); }
+    if (e.isIntersecting) {
+      e.target.classList.add('in-view');
+      e.target.querySelectorAll('[data-counter]').forEach(animateCounter);
+      io.unobserve(e.target);
+    }
   });
 }, {threshold: 0.12});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el) {
   io.observe(el);
 });
 
+// ── Паспорт колледжа: scroll + drag ──────────────────────────────────────
+(function() {
+  var track = document.getElementById('certTrack');
+  var prev  = document.getElementById('certPrev');
+  var next  = document.getElementById('certNext');
+  if (!track) return;
+
+  var STEP = 308; // card width + gap
+
+  if (prev) prev.onclick = function() { track.scrollBy({ left: -STEP, behavior: 'smooth' }); };
+  if (next) next.onclick = function() { track.scrollBy({ left:  STEP, behavior: 'smooth' }); };
+
+  // drag-to-scroll
+  var isDragging = false, startX, scrollLeft;
+  track.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    track.classList.add('dragging');
+    startX = e.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
+  });
+  document.addEventListener('mouseup', function() {
+    isDragging = false;
+    track.classList.remove('dragging');
+  });
+  track.addEventListener('mouseleave', function() {
+    isDragging = false;
+    track.classList.remove('dragging');
+  });
+  track.addEventListener('mousemove', function(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    var x = e.pageX - track.offsetLeft;
+    track.scrollLeft = scrollLeft - (x - startX);
+  });
+})();
+
 // ── FAQ ──────────────────────────────────────────────────────────────────
 document.querySelectorAll('.faq-q').forEach(function(q) {
   q.onclick = function() { q.closest('.faq-item').classList.toggle('open'); };
 });
 
+// ── NPA accordion ─────────────────────────────────────────────────────────
+document.querySelectorAll('.npa-header').forEach(function(h) {
+  h.onclick = function() { h.closest('.npa-item').classList.toggle('open'); };
+});
+
+// ── NPA PDF inline viewer ─────────────────────────────────────────────────
+document.querySelectorAll('.npa-doc').forEach(function(doc) {
+  doc.onclick = function() {
+    var pdfSrc = doc.getAttribute('data-pdf');
+    if (!pdfSrc) return;
+    if (!pdfSrc.startsWith('http')) {
+      var base = 'https://q-werty452.github.io/-IT-college-v2/';
+      pdfSrc = 'https://docs.google.com/viewer?url=' + base + pdfSrc + '&embedded=true';
+    }
+    var viewer = doc.nextElementSibling;
+    if (!viewer || !viewer.classList.contains('npa-pdf-viewer')) return;
+    var isOpen = viewer.classList.contains('open');
+    // close all viewers in this accordion item
+    doc.closest('.npa-docs').querySelectorAll('.npa-pdf-viewer').forEach(function(v) {
+      v.classList.remove('open');
+      v.querySelector('iframe').src = '';
+    });
+    doc.closest('.npa-docs').querySelectorAll('.npa-doc').forEach(function(d) {
+      d.classList.remove('active');
+      d.querySelector('.npa-doc-open').textContent = 'Открыть';
+    });
+    if (!isOpen) {
+      viewer.querySelector('iframe').src = pdfSrc;
+      viewer.classList.add('open');
+      doc.classList.add('active');
+      doc.querySelector('.npa-doc-open').textContent = 'Закрыть';
+    }
+  };
+});
+
+// ── Quick-bar ticker clone ────────────────────────────────────────────────
+(function() {
+  var track = document.getElementById('quick-track');
+  if (!track) return;
+  var inner = track.querySelector('.quick-inner');
+  if (!inner) return;
+  var clone = inner.cloneNode(true);
+  track.appendChild(clone);
+})();
+
+
+// ── Steps section particles ───────────────────────────────────────────────
+(function() {
+  var canvas = document.getElementById('steps-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var section = canvas.closest('.steps-section');
+  var mouse = { x: -9999, y: -9999 };
+  var particles = [];
+  var COUNT = 80;
+  var animRunning = false;
+
+  function resize() {
+    canvas.width  = section.offsetWidth;
+    canvas.height = section.offsetHeight;
+  }
+
+  function initParticles() {
+    particles = [];
+    for (var i = 0; i < COUNT; i++) {
+      particles.push({
+        x:  Math.random() * canvas.width,
+        y:  Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        r:  Math.random() * 2 + 1,
+        alpha: Math.random() * 0.45 + 0.15
+      });
+    }
+  }
+
+  window.addEventListener('resize', function() { resize(); initParticles(); });
+
+  section.addEventListener('mousemove', function(e) {
+    var r = section.getBoundingClientRect();
+    mouse.x = e.clientX - r.left;
+    mouse.y = e.clientY - r.top;
+  });
+  section.addEventListener('mouseleave', function() {
+    mouse.x = -9999; mouse.y = -9999;
+  });
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    var W = canvas.width, H = canvas.height;
+
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+      var dx = p.x - mouse.x, dy = p.y - mouse.y;
+      var dist = Math.sqrt(dx*dx + dy*dy);
+      if (dist < 130 && dist > 0) {
+        var force = (130 - dist) / 130;
+        p.vx += (dx / dist) * force * 0.5;
+        p.vy += (dy / dist) * force * 0.5;
+      }
+      p.vx *= 0.97; p.vy *= 0.97;
+      p.x += p.vx;  p.y += p.vy;
+      if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+      if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,' + p.alpha + ')';
+      ctx.fill();
+    }
+
+    for (var i = 0; i < particles.length; i++) {
+      for (var j = i + 1; j < particles.length; j++) {
+        var a = particles[i], b = particles[j];
+        var ddx = a.x - b.x, ddy = a.y - b.y;
+        var d = Math.sqrt(ddx*ddx + ddy*ddy);
+        if (d < 110) {
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = 'rgba(255,255,255,' + (0.15 * (1 - d/110)) + ')';
+          ctx.lineWidth = 0.7;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+
+  // init after page load so section has correct height
+  window.addEventListener('load', function() {
+    resize();
+    initParticles();
+    if (!animRunning) { animRunning = true; draw(); }
+  });
+})();
 
 // ── Translations ─────────────────────────────────────────────────────────
 var T = {
@@ -375,14 +428,9 @@ var CODES = { ru: 'RU', ky: 'KY', en: 'EN' };
 
 function setLang(lang) {
   // Update switcher UI
-  var flagEl = document.getElementById('lang-flag');
-  var codeEl = document.getElementById('lang-code');
-  if (flagEl) flagEl.textContent = FLAGS[lang];
-  if (codeEl) codeEl.textContent = CODES[lang];
-  document.querySelectorAll('.lang-option').forEach(function(o) {
-    o.classList.toggle('active', o.dataset.lang === lang);
+  document.querySelectorAll('.lang-btn[data-lang]').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.lang === lang);
   });
-  if (ls) ls.classList.remove('open');
 
   // Animate: fade out main content
   var sections = document.querySelectorAll('section, .page-header, .quick-bar, footer');
@@ -413,7 +461,3 @@ function setLang(lang) {
     if (saved && saved !== 'ru' && T[saved]) setLang(saved);
   } catch(e) {}
 })();
-</script>
-
-</body>
-</html>
