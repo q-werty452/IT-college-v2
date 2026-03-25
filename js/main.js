@@ -121,7 +121,9 @@ document.querySelectorAll('.npa-doc').forEach(function(doc) {
   doc.onclick = function() {
     var pdfSrc = doc.getAttribute('data-pdf');
     if (!pdfSrc) return;
-    // Используем прямой путь — браузер рендерит PDF нативно
+    // Строим абсолютный URL чтобы iframe корректно показал PDF
+    var base = window.location.href.replace(/\/[^/]*$/, '/');
+    pdfSrc = base + pdfSrc;
 
     var viewer = doc.nextElementSibling;
     if (!viewer || !viewer.classList.contains('npa-pdf-viewer')) return;
