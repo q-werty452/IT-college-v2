@@ -2564,6 +2564,16 @@ button:focus-visible, a:focus-visible {
   font-size: 1rem;
   max-width: 540px;
 }
+.page-hero .breadcrumb-item {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,.55);
+}
+.page-hero .breadcrumb-item.active { color: rgba(255,255,255,.85); }
+.page-hero a.breadcrumb-item:hover  { color: #fff; }
+.page-hero .breadcrumb-sep {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,.3);
+}
 
 /* Breadcrumb */
 .spec-breadcrumb {
