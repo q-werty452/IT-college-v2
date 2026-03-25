@@ -461,3 +461,50 @@ function setLang(lang) {
     if (saved && saved !== 'ru' && T[saved]) setLang(saved);
   } catch(e) {}
 })();
+
+
+// ── Слайдер новостей в герое ─────────────────────────────────────────────
+(function() {
+  var slider = document.getElementById('hero-slider');
+  if (!slider) return;
+  var track  = document.getElementById('hero-slider-track');
+  var dotsCt = document.getElementById('hero-slider-dots');
+  var prevBtn = document.getElementById('hero-slider-prev');
+  var nextBtn = document.getElementById('hero-slider-next');
+  var slides  = track.querySelectorAll('.hero-slide');
+  var total   = slides.length;
+  var current = 0;
+  var timer;
+
+  // Создаём точки-индикаторы
+  for (var i = 0; i < total; i++) {
+    var dot = document.createElement('div');
+    dot.className = 'hero-slider-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('data-index', i);
+    dotsCt.appendChild(dot);
+  }
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dotsCt.querySelectorAll('.hero-slider-dot').forEach(function(d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function startAuto() { timer = setInterval(function() { goTo(current + 1); }, 4500); }
+  function stopAuto()  { clearInterval(timer); }
+
+  prevBtn.onclick = function() { stopAuto(); goTo(current - 1); startAuto(); };
+  nextBtn.onclick = function() { stopAuto(); goTo(current + 1); startAuto(); };
+
+  dotsCt.addEventListener('click', function(e) {
+    var dot = e.target.closest('.hero-slider-dot');
+    if (dot) { stopAuto(); goTo(+dot.getAttribute('data-index')); startAuto(); }
+  });
+
+  slider.addEventListener('mouseenter', stopAuto);
+  slider.addEventListener('mouseleave', startAuto);
+
+  startAuto();
+})();
