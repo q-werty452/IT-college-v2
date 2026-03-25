@@ -287,19 +287,16 @@ button {
 }
 
 .btn-ebilim {
-  background: linear-gradient(135deg, #1a73e8, #0d5bcc);
-  color: #fff;
-  box-shadow: 0 4px 14px rgba(26, 115, 232, .4);
-  animation: ebilimGlow 2.5s ease-in-out infinite;
+  background: #fff;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  box-shadow: none;
 }
 
 .btn-ebilim:hover {
-  box-shadow: 0 8px 28px rgba(26, 115, 232, .6);
-}
-
-@keyframes ebilimGlow {
-  0%, 100% { box-shadow: 0 4px 14px rgba(26, 115, 232, .4); }
-  50%       { box-shadow: 0 4px 24px rgba(26, 115, 232, .75); }
+  background: var(--light);
+  border-color: var(--primary-2);
+  box-shadow: 0 4px 14px rgba(29, 78, 216, .15);
 }
 
 .btn-outline {
@@ -877,7 +874,7 @@ button {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
+  background: linear-gradient(90deg, var(--primary), #1d4ed8);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.35s ease;
