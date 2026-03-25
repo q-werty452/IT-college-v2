@@ -1,9 +1,9 @@
 /* ================================================
-   animations.css — @keyframes, Reveal System, Delay Classes, Transitions
+   animations.css — Анимации: @keyframes, появление элементов, задержки
    IT COLLEGE v2
    ================================================ */
 
-/* ===================== KEYFRAMES ===================== */
+/* ===================== КЛЮЧЕВЫЕ КАДРЫ (KEYFRAMES) ===================== */
 
 @keyframes slideDown {
   from {
@@ -99,7 +99,7 @@
   }
 }
 
-/* ===================== REVEAL SYSTEM ===================== */
+/* ===================== СИСТЕМА ПОЯВЛЕНИЯ ЭЛЕМЕНТОВ ===================== */
 
 /* ─── Scroll reveal ─── */
 .reveal {
@@ -146,7 +146,7 @@
   filter: blur(0);
 }
 
-/* ===================== DELAY CLASSES ===================== */
+/* ===================== КЛАССЫ ЗАДЕРЖКИ ===================== */
 
 .delay-1 { transition-delay: .05s; }
 .delay-2 { transition-delay: .1s; }
@@ -155,7 +155,7 @@
 .delay-5 { transition-delay: .25s; }
 .delay-6 { transition-delay: .58s; }
 
-/* ===================== PAGE TRANSITION ON LANG CHANGE ===================== */
+/* ===================== ПЕРЕХОД ПРИ СМЕНЕ ЯЗЫКА ===================== */
 
 .lang-fade {
   animation: langFadeOut .25s ease forwards;

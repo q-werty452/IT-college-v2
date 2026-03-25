@@ -1,9 +1,9 @@
 /* ================================================
-   main.js — Main page scripts
+   main.js — Скрипты главной страницы
    IT COLLEGE v2
    ================================================ */
 
-// ── Scroll + UI ──────────────────────────────────────────────────────────
+// ── Прокрутка и UI ────────────────────────────────────────────────────────
 var pb  = document.getElementById('progress-bar');
 var btt = document.getElementById('btt');
 var nb  = document.querySelector('.navbar');
@@ -15,7 +15,7 @@ window.addEventListener('scroll', function() {
 }, {passive:true});
 if (btt) btt.onclick = function() { window.scrollTo({top:0,behavior:'smooth'}); };
 
-// ── Mobile nav ───────────────────────────────────────────────────────────
+// ── Мобильная навигация ────────────────────────────────────────────────────
 var toggle = document.getElementById('nav-toggle');
 var mobile = document.getElementById('nav-mobile');
 var mclose = document.getElementById('nav-mobile-close');
@@ -25,7 +25,7 @@ if (mobile) mobile.addEventListener('click', function(e) {
   if (e.target === mobile) mobile.classList.remove('open');
 });
 
-// ── Programs filter ──────────────────────────────────────────────────────
+// ── Фильтр программ обучения ───────────────────────────────────────────────
 document.querySelectorAll('.filter-btn').forEach(function(btn) {
   btn.addEventListener('click', function() {
     document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -41,7 +41,7 @@ document.querySelectorAll('.filter-btn').forEach(function(btn) {
   });
 });
 
-// ── Scroll reveal ────────────────────────────────────────────────────────
+// ── Анимация появления при прокрутке ───────────────────────────────────────
 function animateCounter(el) {
   var target = parseInt(el.getAttribute('data-counter'), 10);
   var suffix = el.getAttribute('data-suffix') || '';
@@ -70,7 +70,7 @@ document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function
   io.observe(el);
 });
 
-// ── Паспорт колледжа: scroll + drag ──────────────────────────────────────
+// ── Паспорт колледжа: прокрутка и перетаскивание ───────────────────────────
 (function() {
   var track = document.getElementById('certTrack');
   var prev  = document.getElementById('certPrev');
@@ -106,17 +106,17 @@ document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function
   });
 })();
 
-// ── FAQ ──────────────────────────────────────────────────────────────────
+// ── Вопросы и ответы (FAQ) ─────────────────────────────────────────────────
 document.querySelectorAll('.faq-q').forEach(function(q) {
   q.onclick = function() { q.closest('.faq-item').classList.toggle('open'); };
 });
 
-// ── NPA accordion ─────────────────────────────────────────────────────────
+// ── Аккордеон НПА ──────────────────────────────────────────────────────────
 document.querySelectorAll('.npa-header').forEach(function(h) {
   h.onclick = function() { h.closest('.npa-item').classList.toggle('open'); };
 });
 
-// ── NPA PDF inline viewer ─────────────────────────────────────────────────
+// ── Встроенный просмотрщик PDF (НПА) ───────────────────────────────────────
 document.querySelectorAll('.npa-doc').forEach(function(doc) {
   doc.onclick = function() {
     var pdfSrc = doc.getAttribute('data-pdf');
@@ -146,7 +146,7 @@ document.querySelectorAll('.npa-doc').forEach(function(doc) {
   };
 });
 
-// ── Quick-bar ticker clone ────────────────────────────────────────────────
+// ── Клонирование строки быстрых ссылок (тикер) ─────────────────────────────
 (function() {
   var track = document.getElementById('quick-track');
   if (!track) return;
@@ -157,7 +157,7 @@ document.querySelectorAll('.npa-doc').forEach(function(doc) {
 })();
 
 
-// ── Steps section particles ───────────────────────────────────────────────
+// ── Частицы на фоне секции «Как поступить» ─────────────────────────────────
 (function() {
   var canvas = document.getElementById('steps-canvas');
   if (!canvas) return;
@@ -248,7 +248,7 @@ document.querySelectorAll('.npa-doc').forEach(function(doc) {
   });
 })();
 
-// ── Translations ─────────────────────────────────────────────────────────
+// ── Переводы (мультиязычность) ─────────────────────────────────────────────
 var T = {
   ru: {
     nav_abit:       'Абитуриентам',

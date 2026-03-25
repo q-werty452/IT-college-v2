@@ -1,9 +1,9 @@
 /* ================================================
-   components.css — Buttons, Tags, Badges, Cards, FAQ, Filter Bar, Lang-Switcher
+   components.css — Кнопки, теги, карточки, FAQ, фильтр, переключатель языка
    IT COLLEGE v2
    ================================================ */
 
-/* ===================== BUTTONS ===================== */
+/* ===================== КНОПКИ ===================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -116,7 +116,7 @@
 /* Open day button on dark */
 .open-day .btn { box-shadow: 0 4px 20px rgba(0,0,0,.25); }
 
-/* ===================== TAGS & BADGES ===================== */
+/* ===================== ТЕГИ И БЕЙДЖИ ===================== */
 .tag {
   display: inline-block;
   background: rgba(29, 78, 216, .09);
@@ -131,7 +131,7 @@
   border: 1px solid rgba(29, 78, 216, .15);
 }
 
-/* ===================== CARDS ===================== */
+/* ===================== КАРТОЧКИ ===================== */
 .card {
   background: var(--white);
   border: 1px solid var(--border);

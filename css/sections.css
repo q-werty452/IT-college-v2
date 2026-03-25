@@ -1,11 +1,11 @@
 /* ================================================
-   sections.css — Hero, Quick-Bar, Stats-Bar, About, Programs, Advantages,
-                  Steps-Section, Open-Day, NPA Accordion, News Grid,
-                  Graduates Grid, CTA Block, Spec Page elements
+   sections.css — Секции: герой, быстрые ссылки, статистика, программы,
+                  шаги поступления, день открытых дверей, НПА, новости,
+                  выпускники, призыв к действию
    IT COLLEGE v2
    ================================================ */
 
-/* ===================== HERO ===================== */
+/* ===================== ГЕРОЙ / ГЛАВНЫЙ ЭКРАН ===================== */
 .hero {
   background: linear-gradient(135deg, rgba(6,12,29,.82) 0%, rgba(15,23,42,.75) 100%),
               url(https://itrun.kg/static/imgs/background.jpeg) center/cover no-repeat;
@@ -249,7 +249,7 @@
   margin-top: 2px;
 }
 
-/* ===================== QUICK LINKS BAR ===================== */
+/* ===================== БЫСТРЫЕ ССЫЛКИ (QUICK BAR) ===================== */
 .quick-bar {
   background: var(--primary);
   color: #fff;
@@ -664,7 +664,7 @@
 }
 .open-day p { color: rgba(12,35,64,.7); margin-bottom: 28px; position: relative; z-index: 1; max-width: 560px; margin-left: auto; margin-right: auto; }
 
-/* ===================== NPA ACCORDION ===================== */
+/* ===================== АККОРДЕОН НПА ===================== */
 .npa-list {
   max-width: 860px;
   margin: 0 auto;
@@ -785,7 +785,7 @@
 .npa-pdf-fallback a { color: var(--primary); text-decoration: underline; }
 
 /* ================================================================
-   SPEC PAGE — Programs page elements
+   СТРАНИЦА СПЕЦИАЛЬНОСТЕЙ — стили страницы программ
    ================================================================ */
 
 /* Page hero */
