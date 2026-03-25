@@ -461,3 +461,46 @@ function setLang(lang) {
     if (saved && saved !== 'ru' && T[saved]) setLang(saved);
   } catch(e) {}
 })();
+
+// ── Баннер-слайдер в герое ────────────────────────────────────────────────
+(function() {
+  var track = document.getElementById('bannerTrack');
+  if (!track) return;
+  var prev  = document.getElementById('bannerPrev');
+  var next  = document.getElementById('bannerNext');
+  var dotsC = document.getElementById('bannerDots');
+  var slides = track.children;
+  var total  = slides.length;
+  var cur    = 0;
+  var timer;
+
+  // Создаём точки
+  for (var i = 0; i < total; i++) {
+    var d = document.createElement('div');
+    d.className = 'banner-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('data-i', i);
+    dotsC.appendChild(d);
+  }
+
+  function go(n) {
+    cur = (n + total) % total;
+    track.style.transform = 'translateX(-' + cur * 100 + '%)';
+    dotsC.querySelectorAll('.banner-dot').forEach(function(d, i) {
+      d.classList.toggle('active', i === cur);
+    });
+  }
+
+  function startAuto() { timer = setInterval(function() { go(cur + 1); }, 3500); }
+  function stopAuto()  { clearInterval(timer); }
+
+  prev.onclick = function() { stopAuto(); go(cur - 1); startAuto(); };
+  next.onclick = function() { stopAuto(); go(cur + 1); startAuto(); };
+  dotsC.addEventListener('click', function(e) {
+    var d = e.target.closest('.banner-dot');
+    if (d) { stopAuto(); go(+d.getAttribute('data-i')); startAuto(); }
+  });
+  track.parentElement.addEventListener('mouseenter', stopAuto);
+  track.parentElement.addEventListener('mouseleave', startAuto);
+
+  startAuto();
+})();
