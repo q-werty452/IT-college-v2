@@ -2859,6 +2859,10 @@ button:focus-visible, a:focus-visible {
 .hero-banner-mobile { display: none; }
 
 @media (max-width: 900px) {
+  .hero {
+    padding: 100px 24px 29px;
+  }
+
   .hero-inner {
     grid-template-columns: 1fr;
   }
