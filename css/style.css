@@ -3165,10 +3165,6 @@ button:focus-visible, a:focus-visible {
 
 /* ── Мобильный (≤ 640px) ────────────────────────────────────── */
 @media (max-width: 640px) {
-  /* Отключаем анимацию плавания на мобилке */
-  .float,
-  .hero-banner-card { animation: none !important; }
-
   /* Герой */
   .hero { padding: 80px 16px 24px; }
   .hero h1 { font-size: clamp(1.7rem, 7vw, 2.2rem); }
