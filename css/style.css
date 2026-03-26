@@ -1689,7 +1689,7 @@ button:focus-visible, a:focus-visible {
 .hero {
   background: linear-gradient(135deg, rgba(6, 12, 29, .32) 0%, rgba(15, 23, 42, 0.45) 100%), url(https://itrun.kg/static/imgs/background.jpeg) center / cover no-repeat;
   color: #fff;
-  padding: 100px 24px 120px;
+  padding: 100px 24px 100px;
   position: relative;
   overflow: hidden;
   animation: heroFadeIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -1730,11 +1730,11 @@ button:focus-visible, a:focus-visible {
 }
 
 .hero-inner {
-  max-width: 1280px;
+  max-width: 1150px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 64px;
+  grid-template-columns: 1.0fr 1.0fr;
+  gap: 54px;
   align-items: center;
   position: relative;
 }
@@ -1793,7 +1793,6 @@ button:focus-visible, a:focus-visible {
   font-size: clamp(15px, 2vw, 17px);
   opacity: .88;
   margin-bottom: 32px;
-  max-width: 500px;
   line-height: 1.75;
   text-shadow: 0 1px 8px rgba(0,0,0,.3);
   animation: fadeUp .8s .5s both;
@@ -2856,6 +2855,9 @@ button:focus-visible, a:focus-visible {
 }
 
 /* ─── Media queries ─── */
+/* Мобильный баннер: скрыт на десктопе */
+.hero-banner-mobile { display: none; }
+
 @media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
@@ -2863,6 +2865,17 @@ button:focus-visible, a:focus-visible {
 
   .hero-visual {
     display: none;
+  }
+
+  /* Показываем мобильный баннер после quick-bar */
+  .hero-banner-mobile {
+    display: block;
+    padding: 16px var(--container-pad, 24px);
+    background: var(--hero-bg, #0c2340);
+  }
+  .hero-banner-mobile .hero-banner-card {
+    max-width: 100%;
+    border-radius: 16px;
   }
 
   .about-grid { grid-template-columns: 1fr; gap: 40px; }

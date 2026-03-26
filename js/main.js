@@ -462,19 +462,17 @@ function setLang(lang) {
   } catch(e) {}
 })();
 
-// ── Баннер-слайдер в герое ────────────────────────────────────────────────
-(function() {
-  var track = document.getElementById('bannerTrack');
+// ── Баннер-слайдер (инициализация по ID) ─────────────────────────────────
+function initBanner(trackId, prevId, nextId, dotsId) {
+  var track = document.getElementById(trackId);
   if (!track) return;
-  var prev  = document.getElementById('bannerPrev');
-  var next  = document.getElementById('bannerNext');
-  var dotsC = document.getElementById('bannerDots');
-  var slides = track.children;
-  var total  = slides.length;
-  var cur    = 0;
+  var prev  = document.getElementById(prevId);
+  var next  = document.getElementById(nextId);
+  var dotsC = document.getElementById(dotsId);
+  var total = track.children.length;
+  var cur   = 0;
   var timer;
 
-  // Создаём точки
   for (var i = 0; i < total; i++) {
     var d = document.createElement('div');
     d.className = 'banner-dot' + (i === 0 ? ' active' : '');
@@ -501,6 +499,10 @@ function setLang(lang) {
   });
   track.parentElement.addEventListener('mouseenter', stopAuto);
   track.parentElement.addEventListener('mouseleave', startAuto);
-
   startAuto();
-})();
+}
+
+// Десктопный баннер (в герое)
+initBanner('bannerTrack', 'bannerPrev', 'bannerNext', 'bannerDots');
+// Мобильный баннер (после quick-bar)
+initBanner('bannerTrackMob', 'bannerPrevMob', 'bannerNextMob', 'bannerDotsMob');
