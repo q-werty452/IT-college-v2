@@ -1,8 +1,8 @@
 /* ============================================================
-   ABITURIENTAM PAGE — Styles from IT-College-Frontend (kopiya)
+   СТРАНИЦА АБИТУРИЕНТАМ — стили из IT-College-Frontend (копия)
    ============================================================ */
 
-/* ---- Utilities ---- */
+/* ---- Вспомогательные классы ---- */
 .pgm-wrap .section-tag {
   display: inline-block;
   font-size: 0.8rem;
@@ -31,7 +31,7 @@
 }
 
 /* ============================================================
-   ADVANTAGES GRID
+   СЕТКА ПРЕИМУЩЕСТВ
    ============================================================ */
 .pgm-wrap .advantages-grid {
   display: grid;
@@ -61,14 +61,14 @@
 .pgm-wrap .advantage-card h4 { margin-bottom: 8px; }
 .pgm-wrap .advantage-card p  { font-size: 0.88rem; color: var(--kp-gray); }
 
-/* Stagger delays */
+/* Задержки появления по очереди */
 .pgm-wrap .advantages-grid .advantage-card:nth-child(1) { transition-delay: 0s; }
 .pgm-wrap .advantages-grid .advantage-card:nth-child(2) { transition-delay: 0.08s; }
 .pgm-wrap .advantages-grid .advantage-card:nth-child(3) { transition-delay: 0.16s; }
 .pgm-wrap .advantages-grid .advantage-card:nth-child(4) { transition-delay: 0.24s; }
 
 /* ============================================================
-   STATS BAR
+   ПАНЕЛЬ СТАТИСТИКИ
    ============================================================ */
 .pgm-wrap .stats-bar {
   background: #fff;
@@ -114,7 +114,7 @@
 }
 
 /* ============================================================
-   STEPS (light variant — used with inline overrides)
+   ШАГИ (светлый вариант — используется с инлайн-переопределениями)
    ============================================================ */
 .pgm-wrap .steps-grid {
   display: grid;
@@ -152,7 +152,7 @@
 .pgm-wrap .step-card p  { font-size: 0.85rem; line-height: 1.6; }
 
 /* ============================================================
-   DOCUMENTS GRID
+   СЕТКА ДОКУМЕНТОВ
    ============================================================ */
 .pgm-wrap .docs-grid {
   display: grid;
@@ -188,7 +188,7 @@
 .pgm-wrap .doc-text p   { font-size: 0.82rem; color: var(--kp-gray); }
 
 /* ============================================================
-   TABLE
+   ТАБЛИЦА
    ============================================================ */
 .pgm-wrap .table-wrapper {
   overflow-x: auto;
@@ -224,7 +224,7 @@
 .pgm-wrap .badge-warning { background: rgba(255,184,0,0.12); color: #d97706; }
 
 /* ============================================================
-   ACCORDION
+   АККОРДЕОН
    ============================================================ */
 .pgm-wrap .accordion { display: flex; flex-direction: column; gap: 12px; }
 .pgm-wrap .accordion-item {
@@ -293,7 +293,7 @@
 }
 
 /* ============================================================
-   RESPONSIVE
+   АДАПТИВНОСТЬ
    ============================================================ */
 @media (max-width: 1024px) {
   .pgm-wrap .advantages-grid { grid-template-columns: repeat(2, 1fr); }
@@ -314,7 +314,7 @@
 }
 
 /* ============================================================
-   GRADUATES GRID
+   СЕТКА ВЫПУСКНИКОВ
    ============================================================ */
 .pgm-wrap .graduates-grid {
   display: grid;
@@ -361,7 +361,7 @@
 }
 .pgm-wrap .graduate-story { font-size: 0.88rem; color: var(--kp-gray); line-height: 1.65; }
 
-/* Stagger delays */
+/* Задержки появления по очереди */
 .pgm-wrap .graduates-grid .graduate-card:nth-child(1) { transition-delay: 0s; }
 .pgm-wrap .graduates-grid .graduate-card:nth-child(2) { transition-delay: 0.08s; }
 .pgm-wrap .graduates-grid .graduate-card:nth-child(3) { transition-delay: 0.16s; }
@@ -370,7 +370,7 @@
 .pgm-wrap .graduates-grid .graduate-card:nth-child(6) { transition-delay: 0.40s; }
 
 /* ============================================================
-   FEATURES GRID (partner companies)
+   СЕТКА ОСОБЕННОСТЕЙ (компании-партнёры)
    ============================================================ */
 .pgm-wrap .features-grid {
   display: grid;
@@ -409,12 +409,12 @@
 .pgm-wrap .feature-card h4 { margin-bottom: 10px; color: var(--kp-dark); }
 .pgm-wrap .feature-card p  { font-size: 0.9rem; color: var(--kp-gray); }
 
-/* Stagger delays */
+/* Задержки появления по очереди */
 .pgm-wrap .features-grid .feature-card:nth-child(1) { transition-delay: 0s; }
 .pgm-wrap .features-grid .feature-card:nth-child(2) { transition-delay: 0.08s; }
 .pgm-wrap .features-grid .feature-card:nth-child(3) { transition-delay: 0.16s; }
 
-/* Additional responsive */
+/* Дополнительная адаптивность */
 @media (max-width: 1024px) {
   .pgm-wrap .graduates-grid { grid-template-columns: repeat(2, 1fr); }
   .pgm-wrap .features-grid  { grid-template-columns: repeat(2, 1fr); }

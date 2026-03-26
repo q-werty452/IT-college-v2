@@ -1,5 +1,5 @@
 /* ============================================================
-   MODAL — Popup for news & graduate cards
+   МОДАЛЬНОЕ ОКНО — всплывающее для новостей и карточек выпускников
    ============================================================ */
 
 .modal-overlay {
@@ -42,7 +42,7 @@
 .modal-box::-webkit-scrollbar-track { background: #f1f5f9; }
 .modal-box::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
 
-/* ── Close button ─────────────────────────────────────────── */
+/* ── Кнопка закрытия ──────────────────────────────────────── */
 .modal-close {
   position: absolute;
   top: 14px;
@@ -67,7 +67,7 @@
 }
 .modal-close svg { width: 15px; height: 15px; color: #1e293b; }
 
-/* ── Graduate modal ───────────────────────────────────────── */
+/* ── Модальное окно выпускника ────────────────────────────── */
 .modal-grad-header {
   padding: 36px 32px 24px;
   background: linear-gradient(135deg, #f0f7ff 0%, #e8f4ff 100%);
@@ -129,7 +129,7 @@
   letter-spacing: 0.02em;
 }
 
-/* body */
+/* Тело модального окна */
 .modal-body {
   padding: 28px 32px 36px;
 }
@@ -179,7 +179,7 @@
 }
 .modal-tag::before { content: '✓'; font-size: 0.65rem; }
 
-/* gallery */
+/* Галерея */
 .modal-gallery-label {
   font-size: 0.72rem;
   font-weight: 800;
@@ -209,7 +209,7 @@
   filter: grayscale(1) brightness(10);
 }
 
-/* ── News modal ───────────────────────────────────────────── */
+/* ── Модальное окно новости ───────────────────────────────── */
 .modal-news-banner {
   height: 210px;
   position: relative;
@@ -274,7 +274,7 @@
 .modal-news-text p { margin-bottom: 14px; }
 .modal-news-text p:last-child { margin-bottom: 0; }
 
-/* ── Responsive ───────────────────────────────────────────── */
+/* ── Адаптивность ─────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .modal-box { max-width: 92vw; }
   .modal-gallery { grid-template-columns: repeat(3, 1fr); }

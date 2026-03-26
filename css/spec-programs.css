@@ -1,9 +1,9 @@
 /* ============================================================
-   SPEC PAGE — Styles from IT-College-Frontend (kopiya)
-   Loaded only on spec.html, after style.css
+   СТРАНИЦА СПЕЦИАЛЬНОСТЕЙ — стили из IT-College-Frontend (копия)
+   Подключается только на spec.html, после style.css
    ============================================================ */
 
-/* ---- Kopiya color variables (local to this file) ---- */
+/* ---- Цветовые переменные (локальные для этого файла) ---- */
 :root {
   --kp-blue:    #0B5394;
   --kp-lblue:   #17A8CE;
@@ -23,7 +23,7 @@
 }
 
 /* ============================================================
-   PAGE HERO
+   ШАПКА СТРАНИЦЫ
    ============================================================ */
 .pgm-wrap .page-hero {
   background: linear-gradient(135deg, var(--kp-blue) 0%, #061f42 100%);
@@ -50,7 +50,7 @@
   max-width: 540px;
 }
 
-/* Breadcrumb */
+/* Хлебные крошки */
 .pgm-wrap .breadcrumb {
   display: flex;
   align-items: center;
@@ -69,7 +69,7 @@
 }
 
 /* ============================================================
-   SEARCH BAR
+   СТРОКА ПОИСКА
    ============================================================ */
 .pgm-wrap .search-bar {
   display: flex;
@@ -113,7 +113,7 @@
 .pgm-wrap .search-bar button svg { width: 18px; height: 18px; }
 
 /* ============================================================
-   SECTION / BG
+   СЕКЦИЯ / ФОН
    ============================================================ */
 .pgm-wrap .section {
   padding: 88px 0;
@@ -121,7 +121,7 @@
 .pgm-wrap .bg-light { background: var(--kp-bg); }
 
 /* ============================================================
-   FILTER PANEL
+   ПАНЕЛЬ ФИЛЬТРОВ
    ============================================================ */
 .pgm-wrap .filter-panel {
   background: #fff;
@@ -184,7 +184,7 @@
 .pgm-wrap .view-btn svg { width: 18px; height: 18px; }
 
 /* ============================================================
-   FILTER TABS
+   ВКЛАДКИ ФИЛЬТРА
    ============================================================ */
 .pgm-wrap .filter-bar {
   display: flex;
@@ -213,7 +213,7 @@
 }
 
 /* ============================================================
-   PROGRAMS GRID
+   СЕТКА ПРОГРАММ
    ============================================================ */
 .pgm-wrap .programs-grid {
   display: grid;
@@ -223,7 +223,7 @@
 }
 
 /* ============================================================
-   PROGRAM CARD
+   КАРТОЧКА ПРОГРАММЫ
    ============================================================ */
 .pgm-wrap .program-card {
   background: #fff;
@@ -287,7 +287,7 @@
   margin-bottom: 14px;
 }
 
-/* Stagger delays */
+/* Задержки появления по очереди */
 .pgm-wrap .programs-grid .program-card:nth-child(1) { transition-delay: 0s; }
 .pgm-wrap .programs-grid .program-card:nth-child(2) { transition-delay: 0.08s; }
 .pgm-wrap .programs-grid .program-card:nth-child(3) { transition-delay: 0.16s; }
@@ -301,7 +301,7 @@
 .pgm-wrap .programs-grid .program-card:nth-child(11){ transition-delay: 0.80s; }
 
 /* ============================================================
-   BUTTONS (scoped — nav buttons outside .pgm-wrap keep v2 styles)
+   КНОПКИ (скоп — навигационные кнопки вне .pgm-wrap сохраняют стили v2)
    ============================================================ */
 .pgm-wrap .btn {
   display: inline-flex;
@@ -353,7 +353,7 @@
 .pgm-wrap .btn-lg  { padding: 18px 44px; font-size: 1.05rem; }
 
 /* ============================================================
-   PAGINATION
+   ПАГИНАЦИЯ
    ============================================================ */
 .pgm-wrap .pagination {
   display: flex;
@@ -386,7 +386,7 @@
 .pgm-wrap .page-btn svg { width: 16px; height: 16px; }
 
 /* ============================================================
-   CTA SECTION
+   СЕКЦИЯ ПРИЗЫВА К ДЕЙСТВИЮ
    ============================================================ */
 .pgm-wrap .cta-section {
   background: linear-gradient(135deg, #061f42 0%, var(--kp-blue) 100%);
@@ -416,7 +416,7 @@
 }
 
 /* ============================================================
-   REVEAL ANIMATIONS (kopiya style — uses .revealed)
+   АНИМАЦИИ ПОЯВЛЕНИЯ (стиль копии — используется класс .revealed)
    ============================================================ */
 .pgm-wrap .reveal {
   opacity: 0;
@@ -431,7 +431,7 @@
 }
 
 /* ============================================================
-   RESPONSIVE
+   АДАПТИВНОСТЬ
    ============================================================ */
 @media (max-width: 1024px) {
   .pgm-wrap .programs-grid { grid-template-columns: repeat(2, 1fr); }
@@ -455,7 +455,7 @@
 }
 
 /* ============================================================
-   NEWS PAGE STYLES
+   СТИЛИ СТРАНИЦЫ НОВОСТЕЙ
    ============================================================ */
 .pgm-wrap .news-grid {
   display: grid;
@@ -537,7 +537,7 @@
 .pgm-wrap .news-link:hover { color: var(--kp-lblue); gap: 10px; }
 .pgm-wrap .news-link svg { width: 16px; height: 16px; }
 
-/* stagger delays for news cards */
+/* Задержки появления карточек новостей */
 .pgm-wrap .news-grid .news-card:nth-child(1) { transition-delay: 0s; }
 .pgm-wrap .news-grid .news-card:nth-child(2) { transition-delay: 0.08s; }
 .pgm-wrap .news-grid .news-card:nth-child(3) { transition-delay: 0.16s; }
